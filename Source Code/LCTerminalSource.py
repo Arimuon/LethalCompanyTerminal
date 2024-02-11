@@ -36,6 +36,7 @@ def customexit():
     clear_terminal()
     sound_play("ExitTerminal.ogg")
     sleep(0.5)
+    exit()
 
 def startMenu():
     clear_terminal()
