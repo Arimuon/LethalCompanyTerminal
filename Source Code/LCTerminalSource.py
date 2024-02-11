@@ -1,9 +1,10 @@
 ## Made by Arimuon, report issues on the GitHub: https://github.com/Arimuon/LethalCompanyTerminal/issues
-## You can also contribute to the project by forking the repository and making a pull request.
-## This is what the terminal looks like as of 11th February 2024, this may change if the game is updated but I will try and keep this up to date.
+## This code is untested on Mac and Linux systems, if you have any issues please report them on the GitHub
+## You can also contribute to the project by forking the repository and making a pull request
+## This is what the terminal looks like as of 11th February 2024, this may change if the game is updated but I will try and keep this up to date
 
-# This is the SOURCE CODE, if you are not modifing/wanting to view the code then YOUR IN THE WRONG PLACE,
-# Instead there is a file called "LethalCompanyTerminal.exe" which is the file you should be running instead.
+# This is the SOURCE CODE, if you are not modifing/wanting to view the code then !! YOUR'RE IN THE WRONG PLACE !! ,
+# !!! Instead there is a file called "LethalCompanyTerminal.exe" which is the file you should be running instead !!!
 
 from datetime import datetime # Used to grab the current date and time for the terminal
 from termcolor import colored as colour # Used to make the terminal green like Lethal Company's terminal
@@ -11,6 +12,7 @@ import pygame as sound # Used to play sounds from the terminal
 from time import sleep # Used to make the terminal wait before executing the next line of code
 import os # Used to clear the terminal & for audo file paths
 import sys # Used in audio files to handle errors
+import random # Used to generate the company selling percentage
 current_day = datetime.now().strftime('%A') # Grabs the current day in your local timezone
 credits = 60 # The default amount of credits the player has at the start of a Lethal Company game
 
@@ -92,7 +94,28 @@ def mainMenu():
         mainMenu()
 
 def moonsMenu():
-    pass
+    companyPercent = random.choice(['30%', '53%', '77%', '100%'])
+    weatherEffect = random.choice(["","(Rainy)","(Foggy)","(Eclipsed)","(Flooded)"])
+    print(colour(credits, "green"))
+    print("")
+    print(colour("Welcome to the exomoons catalogue.", "green"))
+    print(colour("To route the autopilot to a moon, use the word ROUTE.", "green"))
+    print(colour("To learn about any moon, use the word INFO.", "green"))
+    print(colour("----------------------------", "green"))
+    print("")
+    print(colour(f"* The Company Building   //   Buying at {companyPercent}%.", "green"))
+    print("")
+    print(colour(f"* Experimentation {weatherEffect}", "green"))
+    print(colour(f"* Assurance {weatherEffect}", "green"))
+    print(colour(f"* Vow {weatherEffect}", "green"))
+    print("")
+    print(colour(f"* Offence {weatherEffect}", "green"))
+    print(colour(f"* March {weatherEffect}", "green"))
+    print("")
+    print(colour(f"* Rend {weatherEffect}", "green"))
+    print(colour(f"* Dine {weatherEffect}", "green"))
+    print(colour(f"* Titan {weatherEffect}", "green"))
+    
 def storeMenu():
     pass
 def bestiaryMenu():
