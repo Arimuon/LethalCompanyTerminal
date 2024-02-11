@@ -2,6 +2,9 @@
 ## You can also contribute to the project by forking the repository and making a pull request.
 ## This is what the terminal looks like as of 11th February 2024, this may change if the game is updated but I will try and keep this up to date.
 
+# This is the SOURCE CODE, if you are not modifing/wanting to view the code then YOUR IN THE WRONG PLACE,
+# Instead there is a file called "LethalCompanyTerminal.exe" which is the file you should be running instead.
+
 from datetime import datetime # Used to grab the current date and time for the terminal
 from termcolor import colored as colour # Used to make the terminal green like Lethal Company's terminal
 import pygame as sound # Used to play sounds from the terminal
