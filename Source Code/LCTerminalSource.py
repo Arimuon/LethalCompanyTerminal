@@ -16,10 +16,10 @@ credits = 60 # The default amount of credits the player has at the start of a Le
 
 def sound_play(sound_file_name):
     if getattr(sys, 'frozen', False):
-        # If the application is run as a bundle (compiled by PyInstaller).
+        # If the application is run as a bundle (compiled)
         base_path = sys._MEIPASS
     else:
-        # If the application is run from a Python script (not compiled by PyInstaller).
+        # If the application is run from a Python script (not compiled)
         base_path = os.path.dirname(__file__)
     
     sound_file_path = os.path.join(base_path, sound_file_name)
