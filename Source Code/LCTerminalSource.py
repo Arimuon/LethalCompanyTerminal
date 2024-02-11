@@ -9,15 +9,24 @@ from datetime import datetime # Used to grab the current date and time for the t
 from termcolor import colored as colour # Used to make the terminal green like Lethal Company's terminal
 import pygame as sound # Used to play sounds from the terminal
 from time import sleep # Used to make the terminal wait before executing the next line of code
-import os # Used to clear the terminal
+import os # Used to clear the terminal & for audo file paths
+import sys # Used in audio files to handle errors
 current_day = datetime.now().strftime('%A') # Grabs the current day in your local timezone
 credits = 60 # The default amount of credits the player has at the start of a Lethal Company game
 
 def sound_play(sound_file_name):
+    if getattr(sys, 'frozen', False):
+        # If the application is run as a bundle (compiled by PyInstaller).
+        base_path = sys._MEIPASS
+    else:
+        # If the application is run from a Python script (not compiled by PyInstaller).
+        base_path = os.path.dirname(__file__)
+    
+    sound_file_path = os.path.join(base_path, sound_file_name)
     sound.mixer.init()
-    sound.mixer.music.load(sound_file_name)
+    sound.mixer.music.load(sound_file_path)
     sound.mixer.music.play()
-
+    
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear') # Clears the terminal, uses "cls" on Windows systems otherwise uses "clear"
 
@@ -27,6 +36,7 @@ def customexit():
     sleep(0.5)
 
 def startMenu():
+    clear_terminal()
     sound_play("EnterTerminal.ogg")
     print(colour(credits, "green"))
     print("")
@@ -35,10 +45,6 @@ def startMenu():
     print("")
     print(colour(f"Happy {current_day}.", "green"))
     print(colour("Type 'help' for a list of commands.", "green"))
-    print("")
-    print("")
-    print("")
-    print("")
     userInput = input("").lower()
     if userInput == "help":
         clear_terminal()
