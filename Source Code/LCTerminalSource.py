@@ -51,13 +51,13 @@ def startMenu():
 def mainMenu():
     print(colour(credits, "green"))
     print("")
-    print(">MOONS \n To see the list of moons the autopilot can route to.")
+    print(colour(">MOONS \n To see the list of moons the autopilot can route to.", "green"))
     print("")
-    print(">STORE \n To see the company store's selection of useful items.")
+    print(colour(">STORE \n To see the company store's selection of useful items.", "green"))
     print("")
-    print(">BESTIARY \n To see the list of wildlife on record.")
+    print(colour(">BESTIARY \n To see the list of wildlife on record.", "green"))
     print("")
-    print(">OTHER \n To see the list of other commands.")
+    print(colour(">OTHER \n To see the list of other commands.", "green"))
     userInput = input("").lower()
     if userInput == "moons":
         clear_terminal()
