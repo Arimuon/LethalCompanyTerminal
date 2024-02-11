@@ -1,6 +1,6 @@
 # [BETA] Lethal Company Terminal
 
-This project simulates the terminal interface of the Lethal Company. 
+This project simulates the terminal interface of the terminal in Lethal Company. 
 
 ## Features
 
