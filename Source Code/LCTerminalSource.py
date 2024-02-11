@@ -21,8 +21,13 @@ def sound_play(sound_file_name):
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear') # Clears the terminal, uses "cls" on Windows systems otherwise uses "clear"
 
+def customexit():
+    clear_terminal()
+    sound_play("ExitTerminal.ogg")
+    sleep(0.5)
+
 def startMenu():
-    sound_play("TerminalStart.mp3")
+    sound_play("EnterTerminal.ogg")
     print(colour(credits, "green"))
     print("")
     print(colour("Welcome to the FORTUNE-9 OS", "green"))
@@ -39,11 +44,11 @@ def startMenu():
         clear_terminal()
         mainMenu()
     elif userInput == "exit":
-        exit()
+        customexit()
     else:
         clear_terminal()
         print(colour("[There was no action supplied with the word.]", "green"))
-        sound_play("TerminalError.mp3")
+        sound_play("TerminalTypoError.ogg")
         sleep(1)
         startMenu()
         
@@ -72,11 +77,11 @@ def mainMenu():
         clear_terminal()
         otherMenu()
     elif userInput == "exit":
-        exit()
+        customexit()
     else:
         clear_terminal()
         print(colour("[There was no action supplied with the word.]", "green"))
-        sound_play("TerminalError.mp3")
+        sound_play("TerminalTypoError.ogg")
         sleep(1)
         mainMenu()
 
