@@ -8,4 +8,4 @@ This project simulates the terminal interface of the Lethal Company.
 - Terminal menus
 
 ## Installation
-## [DOWNLOAD HERE](https://1.1.1.1)
+## [DOWNLOAD HERE]()
