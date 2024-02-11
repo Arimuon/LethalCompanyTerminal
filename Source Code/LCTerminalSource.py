@@ -15,6 +15,13 @@ import sys # Used in audio files to handle errors
 import random # Used to generate the company selling percentage
 current_day = datetime.now().strftime('%A') # Grabs the current day in your local timezone
 credits = 60 # The default amount of credits the player has at the start of a Lethal Company game
+# Define lists of acceptable spellings for each command
+store_spellings = ["store", "stor", "storr", "storee", "sto"]
+moons_spellings = ["moon", "moons", "moo", "moonn", "mooons", "mooon", "moonss", "moonsss", "moonssss", "moonsssss", "moonssssss", "moonsssssss", "moonssssssss", "moonsssssssss", "moonssssssssss", "moonsssssssssss", "moonssssssssssss", "moonsssssssssssss", "moonssssssssssssss", "moonsssssssssssssss", "moonssssssssssssssss", "moonsssssssssssssssss", "moonssssssssssssssssss", "moonsssssssssssssssssss", "moon"]
+bestiary_spellings = ["bestiary", "besti", "bestia", "bestiarr", "bestiaryy", "bestiaryyy"]
+other_spellings = ["other", "othe", "othee", "otheerr", "otheerr", "otheerr", "oth"]
+help_spellings = ["help", "hel", "he", "hep", "hepp", "helpp", "helppp", "helpppp", "helppppp", "helpppppp", "helppppppp", "helpppppppp", "helppppppppp", "helpppppppppp", "helppppppppppp", "helpppppppppppp", "helppppppppppppp", "helpppppppppppppp", "helppppppppppppppp", "helpppppppppppppppp", "helppppppppppppppppp", "helpppppppppppppppppp", "helppppppppppppppppppp", "hel"]
+exit_spellings = ["exit", "exi", "ex", "exitt", "exittt", "exitttt", "exittttt", "exitttttt", "exittttttt", "exitttttttt", "exittttttttt", "exitttttttttt", "exittttttttttt", "exitttttttttttt", "exittttttttttttt", "exitttttttttttttt", "exittttttttttttttt", "exitttttttttttttttt", "exittttttttttttttttt", "exitttttttttttttttttt", "exittttttttttttttttttt", "exitttttttttttttttttttt", "exittttttttttttttttttttt", "exitt"]
 
 def sound_play(sound_file_name):
     if getattr(sys, 'frozen', False):
@@ -49,21 +56,21 @@ def startMenu():
     print(colour(f"Happy {current_day}.", "green"))
     print(colour("Type 'help' for a list of commands.", "green"))
     userInput = input("").lower()
-    if userInput == "help":
+    if userInput in help_spellings:
         clear_terminal()
         mainMenu()
-    elif userInput == "exit":
+    elif userInput in exit_spellings:
         customexit()
-    elif userInput == "moon" or "moons" or "moo" or "moonn" or "mooons" or "mooon" or "moonss" or "moonsss" or "moonssss" or "moonsssss" or "moonssssss" or "moonsssssss" or "moonssssssss" or "moonsssssssss" or "moonssssssssss" or "moonsssssssssss" or "moonssssssssssss" or "moonsssssssssssss" or "moonssssssssssssss" or "moonsssssssssssssss" or "moonssssssssssssssss" or "moonsssssssssssssssss" or "moonssssssssssssssssss" or "moonsssssssssssssssssss" or "moon":
+    elif userInput in moons_spellings:
         clear_terminal()
         moonsMenu()
-    elif userInput == "store" or "stor" or "storr" or "storr" or "storr" or "storr" or "storee" or "sto":
+    elif userInput in store_spellings:
         clear_terminal()
         storeMenu()
-    elif userInput == "bestiary" or "besti" or "bestia" or "bestiarr" or "bestiaryy" or "bestiaryyy":
+    elif userInput in bestiary_spellings:
         clear_terminal()
         bestiaryMenu()
-    elif userInput == "other" or "othe" or "othee" or "otheerr" or "otheerr" or "otheerr" or "oth":
+    elif userInput in other_spellings:
         clear_terminal()
         otherMenu()
     else:
@@ -73,7 +80,7 @@ def startMenu():
         sleep(1)
         startMenu()
         
-              
+
 def mainMenu():
     print(colour(credits, "green"))
     print("")
@@ -85,26 +92,29 @@ def mainMenu():
     print("")
     print(colour(">OTHER \n To see the list of other commands.", "green"))
     userInput = input("").lower()
-    if userInput == "moons":
+    if userInput in help_spellings:
+        clear_terminal()
+        mainMenu()
+    elif userInput in exit_spellings:
+        customexit()
+    elif userInput in moons_spellings:
         clear_terminal()
         moonsMenu()
-    elif userInput == "store":
+    elif userInput in store_spellings:
         clear_terminal()
         storeMenu()
-    elif userInput == "bestiary":
+    elif userInput in bestiary_spellings:
         clear_terminal()
         bestiaryMenu()
-    elif userInput == "other":
+    elif userInput in other_spellings:
         clear_terminal()
         otherMenu()
-    elif userInput == "exit":
-        customexit()
     else:
         clear_terminal()
         print(colour("[There was no action supplied with the word.]", "green"))
         sound_play("TerminalTypoError.ogg")
         sleep(1)
-        mainMenu()
+        startMenu()
 
 def moonsMenu():
     companyPercent = random.choice(['30%', '53%', '77%', '100%'])
@@ -128,6 +138,30 @@ def moonsMenu():
     print(colour(f"* Rend {random.choice(weatherEffects)}", "green"))
     print(colour(f"* Dine {random.choice(weatherEffects)}", "green"))
     print(colour(f"* Titan {random.choice(weatherEffects)}", "green"))
+    userInput = input("").lower()
+    if userInput in help_spellings:
+        clear_terminal()
+        mainMenu()
+    elif userInput in exit_spellings:
+        customexit()
+    elif userInput in moons_spellings:
+        clear_terminal()
+        moonsMenu()
+    elif userInput in store_spellings:
+        clear_terminal()
+        storeMenu()
+    elif userInput in bestiary_spellings:
+        clear_terminal()
+        bestiaryMenu()
+    elif userInput in other_spellings:
+        clear_terminal()
+        otherMenu()
+    else:
+        clear_terminal()
+        print(colour("[There was no action supplied with the word.]", "green"))
+        sound_play("TerminalTypoError.ogg")
+        sleep(1)
+        startMenu()
     
 def storeMenu():
     clear_terminal()
@@ -135,7 +169,7 @@ def storeMenu():
     print("")
     print(colour("Welcome to the Company Store.", "green"))
     print(colour("Use words BUY and INFO on any item.", "green"))
-    print(colour("Order tools in bulk by typing a number."))
+    print(colour("Order tools in bulk by typing a number."), "green")
     print(colour("----------------------------"))
     print("")
     print("")
@@ -168,6 +202,30 @@ def storeMenu():
     print(colour("Shower // 180", "green"))
     print(colour("Table // 70", "green"))
     print(colour("Television // 130", "green"))
+    userInput = input("").lower()
+    if userInput in help_spellings:
+        clear_terminal()
+        mainMenu()
+    elif userInput in exit_spellings:
+        customexit()
+    elif userInput in moons_spellings:
+        clear_terminal()
+        moonsMenu()
+    elif userInput in store_spellings:
+        clear_terminal()
+        storeMenu()
+    elif userInput in bestiary_spellings:
+        clear_terminal()
+        bestiaryMenu()
+    elif userInput in other_spellings:
+        clear_terminal()
+        otherMenu()
+    else:
+        clear_terminal()
+        print(colour("[There was no action supplied with the word.]", "green"))
+        sound_play("TerminalTypoError.ogg")
+        sleep(1)
+        startMenu()
 
 def bestiaryMenu():
     clear_terminal()
@@ -179,10 +237,58 @@ def bestiaryMenu():
     print(colour("-----------------------------", "green"))
     print("")
     print(colour("No data collected on wildlife. Scans are required.", "green"))
+    userInput = input("").lower()
+    if userInput in help_spellings:
+        clear_terminal()
+        mainMenu()
+    elif userInput in exit_spellings:
+        customexit()
+    elif userInput in moons_spellings:
+        clear_terminal()
+        moonsMenu()
+    elif userInput in store_spellings:
+        clear_terminal()
+        storeMenu()
+    elif userInput in bestiary_spellings:
+        clear_terminal()
+        bestiaryMenu()
+    elif userInput in other_spellings:
+        clear_terminal()
+        otherMenu()
+    else:
+        clear_terminal()
+        print(colour("[There was no action supplied with the word.]", "green"))
+        sound_play("TerminalTypoError.ogg")
+        sleep(1)
+        startMenu()
 def otherMenu():
     clear_terminal()
     print(colour(credits, "green"))
     print("")
+    userInput = input("").lower()
+    if userInput in help_spellings:
+        clear_terminal()
+        mainMenu()
+    elif userInput in exit_spellings:
+        customexit()
+    elif userInput in moons_spellings:
+        clear_terminal()
+        moonsMenu()
+    elif userInput in store_spellings:
+        clear_terminal()
+        storeMenu()
+    elif userInput in bestiary_spellings:
+        clear_terminal()
+        bestiaryMenu()
+    elif userInput in other_spellings:
+        clear_terminal()
+        otherMenu()
+    else:
+        clear_terminal()
+        print(colour("[There was no action supplied with the word.]", "green"))
+        sound_play("TerminalTypoError.ogg")
+        sleep(1)
+        startMenu()
 
 # Main program
 startMenu()
