@@ -11,4 +11,4 @@ This project simulates the terminal interface of the terminal in Lethal Company.
 *Had to be done through Discord due to GitHub upload size limitations :(*
 ## [Virus Total Result](https://www.virustotal.com/gui/file/36f4f6606337af31a4d61d4046810c43125dc8971356b58d9c79fc1f38f11b7d)
 *Matches rule PyInstaller from ruleset PyInstaller: Identifies executable converted using PyInstaller. This rule by itself does NOT necessarily mean the detected file is malicious.*
-### [Source Code](https://github.com/Arimuon/LethalCompanyTerminal/tree/main/source%20code)
+### [Source Code Link](https://github.com/Arimuon/LethalCompanyTerminal/tree/main/source%20code)
