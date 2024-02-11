@@ -3,14 +3,14 @@
 ## You can also contribute to the project by forking the repository and making a pull request
 ## This is what the terminal looks like as of 11th February 2024, this may change if the game is updated but I will try and keep this up to date
 
-# This is the SOURCE CODE, if you are not modifing/wanting to view the code then !! YOUR'RE IN THE WRONG PLACE !! ,
+# This is the SOURCE CODE, if you are not modifying/wanting to view the code then !! YOUR'RE IN THE WRONG PLACE !! ,
 # !!! Instead there is a file called "LethalCompanyTerminal.exe" which is the file you should be running instead !!!
 
 from datetime import datetime # Used to grab the current date and time for the terminal
 from termcolor import colored as colour # Used to make the terminal green like Lethal Company's terminal
 import pygame as sound # Used to play sounds from the terminal
 from time import sleep # Used to make the terminal wait before executing the next line of code
-import os # Used to clear the terminal & for audo file paths
+import os # Used to clear the terminal & for audio file paths
 import sys # Used in audio files to handle errors
 import random # Used to generate the company selling percentage
 current_day = datetime.now().strftime('%A') # Grabs the current day in your local timezone
