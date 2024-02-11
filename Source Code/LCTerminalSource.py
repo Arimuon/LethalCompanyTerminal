@@ -95,7 +95,7 @@ def mainMenu():
 
 def moonsMenu():
     companyPercent = random.choice(['30%', '53%', '77%', '100%'])
-    weatherEffect = random.choice(["","(Rainy)","(Foggy)","(Eclipsed)","(Flooded)"])
+    weatherEffects = ["","","(Rainy)","(Foggy)","(Eclipsed)","(Flooded)"]
     print(colour(credits, "green"))
     print("")
     print(colour("Welcome to the exomoons catalogue.", "green"))
@@ -103,18 +103,18 @@ def moonsMenu():
     print(colour("To learn about any moon, use the word INFO.", "green"))
     print(colour("----------------------------", "green"))
     print("")
-    print(colour(f"* The Company Building   //   Buying at {companyPercent}%.", "green"))
+    print(colour(f"* The Company Building   //   Buying at {companyPercent}.", "green"))
     print("")
-    print(colour(f"* Experimentation {weatherEffect}", "green"))
-    print(colour(f"* Assurance {weatherEffect}", "green"))
-    print(colour(f"* Vow {weatherEffect}", "green"))
+    print(colour(f"* Experimentation {random.choice(weatherEffects)}", "green"))
+    print(colour(f"* Assurance {random.choice(weatherEffects)}", "green"))
+    print(colour(f"* Vow {random.choice(weatherEffects)}", "green"))
     print("")
-    print(colour(f"* Offence {weatherEffect}", "green"))
-    print(colour(f"* March {weatherEffect}", "green"))
+    print(colour(f"* Offence {random.choice(weatherEffects)}", "green"))
+    print(colour(f"* March {random.choice(weatherEffects)}", "green"))
     print("")
-    print(colour(f"* Rend {weatherEffect}", "green"))
-    print(colour(f"* Dine {weatherEffect}", "green"))
-    print(colour(f"* Titan {weatherEffect}", "green"))
+    print(colour(f"* Rend {random.choice(weatherEffects)}", "green"))
+    print(colour(f"* Dine {random.choice(weatherEffects)}", "green"))
+    print(colour(f"* Titan {random.choice(weatherEffects)}", "green"))
     
 def storeMenu():
     pass
