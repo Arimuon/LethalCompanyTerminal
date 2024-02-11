@@ -53,6 +53,18 @@ def startMenu():
         mainMenu()
     elif userInput == "exit":
         customexit()
+    elif userInput == "moon" or "moons" or "moo" or "moonn" or "mooons" or "mooon":
+        clear_terminal()
+        moonsMenu()
+    elif userInput == "store" or "stor" or "storr" or "storr" or "storr" or "storr":
+        clear_terminal()
+        storeMenu()
+    elif userInput == "bestiary" or "besti" or "bestia" or "bestiarr" or "bestiaryy" or "bestiaryyy":
+        clear_terminal()
+        bestiaryMenu()
+    elif userInput == "other" or "othe" or "othee" or "otheerr" or "otheerr" or "otheerr":
+        clear_terminal()
+        otherMenu()
     else:
         clear_terminal()
         print(colour("[There was no action supplied with the word.]", "green"))
