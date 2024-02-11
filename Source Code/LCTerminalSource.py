@@ -1,11 +1,13 @@
+## Made by Arimuon, report issues on the GitHub: https://github.com/Arimuon/LethalCompanyTerminal/issues
+## You can also contribute to the project by forking the repository and making a pull request.
+## This is what the terminal looks like as of 11th February 2024, this may change if the game is updated but I will try and keep this up to date.
+
 from datetime import datetime # Used to grab the current date and time for the terminal
 from termcolor import colored as colour # Used to make the terminal green like Lethal Company's terminal
 from playsound import sound # Used to play sounds from the terminal
 from time import sleep # Used to make the terminal wait before executing the next line of code
-current_day = datetime.now().strftime('%A') # Grabs the current day
-credits = 60 # The amount of credits the player has (Based on the default amount of credits at the start of Lethal Company)
-
-'''This is what the terminal looks like as of 11th February 2024, this may change if the game is updated.'''
+current_day = datetime.now().strftime('%A') # Grabs the current day in your local timezone
+credits = 60 # The default amount of credits the player has at the start of a Lethal Company game
 
 def startMenu():
     print(colour(credits, "green"))
