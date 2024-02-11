@@ -63,7 +63,7 @@ def startMenu():
     elif userInput == "bestiary" or "besti" or "bestia" or "bestiarr" or "bestiaryy" or "bestiaryyy":
         clear_terminal()
         bestiaryMenu()
-    elif userInput == "other" or "othe" or "othee" or "otheerr" or "otheerr" or "otheerr":
+    elif userInput == "other" or "othe" or "othee" or "otheerr" or "otheerr" or "otheerr" or "oth":
         clear_terminal()
         otherMenu()
     else:
@@ -130,11 +130,59 @@ def moonsMenu():
     print(colour(f"* Titan {random.choice(weatherEffects)}", "green"))
     
 def storeMenu():
-    pass
+    clear_terminal()
+    print(colour(credits, "green"))
+    print("")
+    print(colour("Welcome to the Company Store.", "green"))
+    print(colour("Use words BUY and INFO on any item.", "green"))
+    print(colour("Order tools in bulk by typing a number."))
+    print(colour("----------------------------"))
+    print("")
+    print("")
+    print(colour("* Walkie-talkie // Price: 12", "green"))
+    print(colour("* Flashlight // Price: 15", "green"))
+    print(colour("* Shovel // Price: 30", "green"))
+    print(colour("* Lockpicker // Price: 20", "green"))
+    print(colour("* Pro-flashlight // Price: 25", "green"))
+    print(colour("* Stun grenade // Price: 30", "green"))
+    print(colour("* Boombox // Price: 60", "green"))
+    print(colour("* TZP-Inhalant // Price: 120", "green"))
+    print(colour("* Zap gun // Price: 400", "green"))
+    print(colour("* Jetpack // Price: 700", "green"))
+    print(colour("* Extention ladder // Price: 60", "green"))
+    print(colour("* Radar-booster // Price: 60", "green"))
+    print("Spray paint // Price: 50", "green")
+    print("")
+    print("")
+    print(colour("SHIP UPGRADES", "green"))
+    print(colour("* Loud horn // Price: 100", "green"))
+    print(colour("* Signal Translator // Price: 255", "green"))
+    print(colour("* Teleporter // Price: 375", "green"))
+    print(colour("* Inverse Teleporter // Price: 425", "green"))
+    print("")
+    print(colour("The selection of ship decor rotates per-quota. Be sure to check back next week:", "green"))
+    print(colour("----------------------------"))
+    print("")
+    print(colour("Plushie pajama man // 100", "green"))
+    print(colour("Pajama suit // 900", "green"))
+    print(colour("Shower // 180", "green"))
+    print(colour("Table // 70", "green"))
+    print(colour("Television // 130", "green"))
+
 def bestiaryMenu():
-    pass
+    clear_terminal()
+    print(colour(credits, "green"))
+    print("")
+    print(colour("BESTIARY.", "green"))
+    print("")
+    print(colour("To access a creature file, type 'INFO' after its name.", "green"))
+    print(colour("-----------------------------", "green"))
+    print("")
+    print(colour("No data collected on wildlife. Scans are required.", "green"))
 def otherMenu():
-    pass
+    clear_terminal()
+    print(colour(credits, "green"))
+    print("")
 
 # Main program
 startMenu()
