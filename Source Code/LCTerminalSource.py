@@ -19,7 +19,7 @@ def sound_play(sound_file_name):
     sound.mixer.music.play()
 
 def clear_terminal():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear') # Clears the terminal, uses "cls" on Windows systems otherwise uses "clear"
 
 def startMenu():
     sound_play("TerminalStart.mp3")
