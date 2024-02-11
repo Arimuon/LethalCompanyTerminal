@@ -4,12 +4,18 @@
 
 from datetime import datetime # Used to grab the current date and time for the terminal
 from termcolor import colored as colour # Used to make the terminal green like Lethal Company's terminal
-from playsound import sound # Used to play sounds from the terminal
+import pygame as sound # Used to play sounds from the terminal
 from time import sleep # Used to make the terminal wait before executing the next line of code
 current_day = datetime.now().strftime('%A') # Grabs the current day in your local timezone
 credits = 60 # The default amount of credits the player has at the start of a Lethal Company game
 
+def sound_play(sound_file_name):
+    sound.mixer.init()
+    sound.mixer.music.load(sound_file_name)
+    sound.mixer.music.play()
+
 def startMenu():
+    sound_play("TerminalStart.mp3")
     print(colour(credits, "green"))
     print("")
     print(colour("Welcome to the FORTUNE-9 OS", "green"))
