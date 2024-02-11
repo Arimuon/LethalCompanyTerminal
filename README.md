@@ -13,5 +13,5 @@ This project simulates the terminal interface of the Lethal Company.
 
 ## !! Warning !!
 May be flagged by antivirus software, am not sure why but what I can see on VirusTotal it seems to be a issue with Pyinstaller. 
-"Matches rule PyInstaller from ruleset PyInstaller at https://github.com/bartblaze/Yara-rules by @bartblaze
-Identifies executable converted using PyInstaller. This rule by itself does NOT necessarily mean the detected file is malicious." - Virus Total result
+`"Matches rule PyInstaller from ruleset PyInstaller at https://github.com/bartblaze/Yara-rules by @bartblaze
+Identifies executable converted using PyInstaller. This rule by itself does NOT necessarily mean the detected file is malicious." - Virus Total result`
