@@ -53,10 +53,10 @@ def startMenu():
         mainMenu()
     elif userInput == "exit":
         customexit()
-    elif userInput == "moon" or "moons" or "moo" or "moonn" or "mooons" or "mooon":
+    elif userInput == "moon" or "moons" or "moo" or "moonn" or "mooons" or "mooon" or "moonss" or "moonsss" or "moonssss" or "moonsssss" or "moonssssss" or "moonsssssss" or "moonssssssss" or "moonsssssssss" or "moonssssssssss" or "moonsssssssssss" or "moonssssssssssss" or "moonsssssssssssss" or "moonssssssssssssss" or "moonsssssssssssssss" or "moonssssssssssssssss" or "moonsssssssssssssssss" or "moonssssssssssssssssss" or "moonsssssssssssssssssss" or "moon":
         clear_terminal()
         moonsMenu()
-    elif userInput == "store" or "stor" or "storr" or "storr" or "storr" or "storr":
+    elif userInput == "store" or "stor" or "storr" or "storr" or "storr" or "storr" or "storee" or "sto":
         clear_terminal()
         storeMenu()
     elif userInput == "bestiary" or "besti" or "bestia" or "bestiarr" or "bestiaryy" or "bestiaryyy":
